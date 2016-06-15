@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="array_1" ><br/>
+    <input type="button" id="btn" value="PUSH"><br/>
+    <input type="button" id="btn2" value="POP"><br/>
+    <input type="button" id="btn3" value="SHIFT"><br/>
+    <input type="button" id="btn4" value="UNSHIFT"><br/>
+   
+    <div id="display"></div>   
+<script>
+	 var event1 = document.getElementById('btn');
+     event1.addEventListener('click',pushme,false);
+     var event2 = document.getElementById('btn2');
+     event2.addEventListener('click',popme,false);
+     var event3 = document.getElementById('btn3');
+     event3.addEventListener('click',shiftme,false);
+     var event4 = document.getElementById('btn4');
+     event4.addEventListener('click',unshiftme,false);
+	var myArrays = ["Sam","Charlotte","Becky","Jason"];
+
+		function pushme(){
+			myArrays.push(document.getElementById('array_1').value);
+
+       		document.getElementById('display').innerHTML = myArrays;
+}
+		function popme(){
+			myArrays.pop(document.getElementById('array_1').value);
+
+       		document.getElementById('display').innerHTML = myArrays;
+}		
+		function shiftme(){
+			myArrays.shift(document.getElementById('array_1').value);
+
+       		document.getElementById('display').innerHTML = myArrays;
+}
+		function unshiftme(){
+			myArrays.unshift(document.getElementById('array_1').value);
+
+       		document.getElementById('display').innerHTML = myArrays;
+}
+
+</script>
+</body>
+</html>

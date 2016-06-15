@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.container{
+			margin-right: 10%;
+			margin-left: 10%;
+			padding: 10%;
+			padding-bottom: 30%;
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>	
+	<div class="container">
+	<h1 style="font-size:300%;">RANDOM NAME GENERATOR :</h1>
+	<input type="text" id="array_1" >
+    <input type="submit" id="submit"><br/>
+    <input type="button" id="btn" value="Generate A Winner"><br/>
+    <div id="display" style="color:red;font-size:500%;"></div>  
+    <div id="winner" style="color:green;font-size:1000%;"></div>  
+    </div> 
+
+<script>	
+			var event1 = document.getElementById('submit');
+     		event1.addEventListener('click',arrays,false);
+     		var event2 = document.getElementById('btn');
+     		event2.addEventListener('click',randomName,false);
+			var names = []; 
+	
+			
+
+			function arrays(){
+				var user_input = document.getElementById('array_1').value;
+				names.push(user_input);
+				document.getElementById('display').innerHTML = names;
+
+			}	
+			function randomName(){
+				
+				var rand = Math.floor(Math.random()*names.length);
+				 
+				 	document.getElementById('winner').innerHTML = names[rand];
+		
+				 
+
+			}
+
+
+</script>
+
+</body>
+</html>

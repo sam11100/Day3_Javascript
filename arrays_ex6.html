@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="array_1" ><br/>
+    <input type="submit" id="submit"><br/>
+    <div id="display"></div>   
+<script>
+	 var event1 = document.getElementById('submit');
+     event1.addEventListener('click',arrays,false);
+	var myArrays = ["England", "France", "Italy", "Mexico", 
+	"Poland", "Russia", "China", "Greece", "Egypt", "India"];
+
+		function arrays(){
+			var user_input = document.getElementById('array_1').value
+			
+
+			for(var i = 0;i<myArrays.length;i++){
+				var upcase_input = user_input.toUpperCase();
+				var upcase_arrays = myArrays[i].toUpperCase();
+				if (upcase_arrays==upcase_input) {
+
+					document.getElementById('display').innerHTML = myArrays[i]+" is present in the array. It's index value is "+i ;
+					break;
+				}else{
+					document.getElementById('display').innerHTML = myArrays[i]	+" is not present in the array.";
+				}
+			}	
+
+
+
+
+
+      		
+		}
+
+</script>
+</body>
+</html>

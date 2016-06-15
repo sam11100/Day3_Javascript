@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <input type="text" id="array_1" placeholder="Array Name"><br/>
+  <input type="number" id="array_2" placeholder="index" ><br/>
+    <input type="button" id="btn" value="PUSH"><br/>
+
+    
+   
+    <div id="display"></div>   
+<script>
+   var event1 = document.getElementById('btn');
+     event1.addEventListener('click',popme,false);
+    var myArrays = ["Sam","Charlotte","Becky","Jason"];
+
+    function popme(){
+      var input_array = document.getElementById('array_1').value;
+      var input_index = Number(document.getElementById('array_2').value);
+      myArrays.splice(input_index, 0, input_array);
+          document.getElementById('display').innerHTML = myArrays;
+}
+    
+
+</script>
+</body>
+</html>

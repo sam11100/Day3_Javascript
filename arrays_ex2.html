@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="array_1" ><br/>
+    <input type="submit" id="submit"><br/>
+    <div id="display"></div>   
+<script>
+	 var event1 = document.getElementById('submit');
+     event1.addEventListener('click',arrays,false);
+	var myArrays = ["Sam","Charlotte","Becky","Jason"];
+
+		function arrays(){
+			myArrays.push(document.getElementById('array_1').value);
+      		
+
+      		document.getElementById('display').innerHTML = myArrays +"<br/> "+ myArrays.length;
+
+
+		}
+
+</script>
+</body>
+</html>
